@@ -557,7 +557,7 @@ ul {
 .hero-title {
   font-weight: 800;
   font-stretch: 118%;
-  font-size: clamp(44px, 8.6vw, 168px);
+  font-size: clamp(44px, min(8.6vw, 15vh), 168px);
   line-height: 0.84;
   white-space: nowrap;
   letter-spacing: 0.02em;
@@ -631,10 +631,14 @@ ul {
     display: inline;
   }
 }
+/* Vertically centred on the start edge (mirrors the hint pill on the end edge)
+   so it never sits on top of the wide English title at the bottom. */
 .hero-card {
   position: absolute;
   inset-inline-start: var(--gutter);
-  bottom: var(--gutter);
+  inset-block: 0;
+  height: fit-content;
+  margin-block: auto;
   z-index: 3;
   width: 124px;
   color: var(--ink);

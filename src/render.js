@@ -262,7 +262,7 @@ const footer = (t) => `
   <div class="footer-legal">
     <span>${t.footer.copyright}</span>
     <span class="legal-photos">${t.footer.credit} ${igBtn}</span>
-    <span dir="ltr">${t.footer.poweredBy} <a href="https://tb3technologies.tech" target="_blank" rel="noopener">tb3technologies.tech</a></span>
+    <span dir="ltr">${t.footer.poweredBy} <a href="https://tb3technologies.tech" target="_blank" rel="noopener">TB3 TECHNOLOGIES</a></span>
   </div>
 </footer>`;
 
