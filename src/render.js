@@ -10,6 +10,8 @@ export const ICON = {
   menu: `<span class="menu-lines" aria-hidden="true"><i></i><i></i></span>`,
 };
 
+const igBtn = `<a class="ig-btn" href="https://www.instagram.com/hobopeeba/" target="_blank" rel="noopener" aria-label="Instagram @hobopeeba"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a>`;
+
 const arrowBtn = (label, href, cls = '') =>
   `<a class="btn ${cls}" href="${href}"><span class="btn-fill" aria-hidden="true"></span><span class="btn-label">${label}</span>${ICON.arrow}</a>`;
 
@@ -51,7 +53,7 @@ const nav = (t) => `
   <nav class="menu-links" aria-label="${t.nav.pagesLabel}">
     ${t.nav.links.map(([l, h], i) => `<a href="${h}" data-menu-link><span class="menu-num">0${i + 1}</span><span class="menu-txt">${l}</span></a>`).join('')}
   </nav>
-  <p class="menu-foot">${t.footer.credit}</p>
+  <p class="menu-foot legal-photos">${t.footer.credit} ${igBtn}</p>
 </div>`;
 
 const intro = (t) => `
@@ -259,7 +261,7 @@ const footer = (t) => `
   </div>
   <div class="footer-legal">
     <span>${t.footer.copyright}</span>
-    <span>${t.footer.credit} · <a href="https://www.instagram.com/p/DOLjYMWDHg6/" target="_blank" rel="noopener">Instagram</a></span>
+    <span class="legal-photos">${t.footer.credit} ${igBtn}</span>
     <span dir="ltr">${t.footer.poweredBy} <a href="https://tb3technologies.tech" target="_blank" rel="noopener">tb3technologies.tech</a></span>
   </div>
 </footer>`;

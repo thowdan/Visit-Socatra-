@@ -139,7 +139,7 @@ export default {
     followLabel: 'Follow on',
     cta: 'Plan your trip',
     copyright: '© 2026 Visit Socotra. A fan-made showcase.',
-    credit: 'Photos © @hobopeeba, used with permission',
+    credit: 'Photos',
     poweredBy: 'Powered by',
     top: 'Back to top',
   },

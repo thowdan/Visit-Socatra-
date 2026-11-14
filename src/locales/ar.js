@@ -137,7 +137,7 @@ export default {
     followLabel: 'تابع',
     cta: 'خطط لرحلتك',
     copyright: '© 2026 زوروا سقطرى. عرض غير رسمي.',
-    credit: 'الصور © @hobopeeba، تُستخدم بإذن',
+    credit: 'الصور',
     poweredBy: 'Powered by',
     top: 'العودة للأعلى',
   },
