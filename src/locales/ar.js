@@ -136,7 +136,7 @@ export default {
     pagesLabel: 'الصفحات',
     followLabel: 'تابع',
     cta: 'خطط لرحلتك',
-    copyright: '© 2026 زوروا سقطرى. عرض غير رسمي.',
+    copyright: '© 2026 زوروا سقطرى.',
     credit: 'الصور',
     poweredBy: 'Powered by',
     top: 'العودة للأعلى',

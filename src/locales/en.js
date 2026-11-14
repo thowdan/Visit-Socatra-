@@ -138,7 +138,7 @@ export default {
     pagesLabel: 'Pages',
     followLabel: 'Follow on',
     cta: 'Plan your trip',
-    copyright: '© 2026 Visit Socotra. A fan-made showcase.',
+    copyright: '© 2026 Visit Socotra.',
     credit: 'Photos',
     poweredBy: 'Powered by',
     top: 'Back to top',
