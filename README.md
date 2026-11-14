@@ -9,7 +9,10 @@ npm install
 npm run dev       # http://localhost:5173
 npm run build     # static site in dist/
 npm run frames    # re-extract hero frames from "Hero section/" (needs ffmpeg + cwebp)
+npm run deploy    # build + deploy to Cloudflare (needs `cf auth login` once)
 ```
+
+Live at **https://socotra.tb3technologies.tech**: a static-assets Cloudflare Worker (`visit-socotra`) configured in `cloudflare.config.ts`.
 
 ## Sections (top to bottom)
 
