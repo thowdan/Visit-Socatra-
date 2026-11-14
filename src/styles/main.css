@@ -144,6 +144,12 @@ ul {
 .line > span {
   display: inline-block;
 }
+/* Arabic display fonts (esp. Aref Ruqaa) draw well above/below the line box;
+   give the reveal mask room so letters are not trimmed. */
+:root[lang='ar'] .line {
+  padding-block: 0.22em 0.12em;
+  margin-block: -0.22em -0.12em;
+}
 
 .big-title {
   display: flex;
@@ -594,6 +600,7 @@ ul {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
   pointer-events: none;
 }
 :root[lang='ar'] .hero-hint {
@@ -1675,8 +1682,12 @@ ul {
   .hero-card {
     display: none;
   }
+  /* "SOCOTRA" at 118% width is ~6.3em wide: 13.4vw keeps it inside the gutters */
   .hero-title {
     white-space: normal;
+    font-size: 13.4vw;
+  }
+  :root[lang='ar'] .hero-title {
     font-size: 17vw;
   }
   .hero-hint {
@@ -1742,6 +1753,13 @@ ul {
   }
   .split-center {
     gap: 16px;
+  }
+
+  .big-title .sans {
+    font-size: min(46px, 12.4vw);
+  }
+  .big-title .serif {
+    font-size: min(52px, 13.6vw);
   }
 
   .fb-head,
