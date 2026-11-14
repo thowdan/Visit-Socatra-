@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visit Socotra — The most surreal island on Earth</title>
+    <meta
+      name="description"
+      content="An interactive journey through Socotra: dragon’s blood forests, desert roses, white dunes and turquoise seas in the Arabian Sea."
+    />
+    <meta name="theme-color" content="#1C1A17" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M5 21c4.5-8.5 12-13 19-13s14.5 4.5 19 13c-6-2.4-12.4-3.4-19-3.4S11 18.6 5 21z' fill='%23E8598B'/%3E%3Cpath d='M24 18v24' stroke='%23E8598B' stroke-width='3'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Instrument+Serif:ital@0;1&family=Caveat:wght@700&family=Readex+Pro:wght@300..700&family=Aref+Ruqaa:wght@400;700&display=swap"
+    />
+    <link rel="preload" as="image" href="/img/hero-foreground.webp" />
+    <link rel="preload" as="image" href="/frames/f_001.webp" />
+  </head>
+  <body>
+    <div class="preloader" data-preloader aria-hidden="true">
+      <div class="pre-inner">
+        <svg class="pre-mark" viewBox="0 0 48 48"><path d="M5 21c4.5-8.5 12-13 19-13s14.5 4.5 19 13c-6-2.4-12.4-3.4-19-3.4S11 18.6 5 21z" fill="currentColor"/><path d="M24 18v24M24 25l-7-6.5M24 25l7-6.5M24 31l-5-5M24 31l5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <p class="pre-count"><span data-pre-count>00</span><sup>%</sup></p>
+        <p class="pre-label" data-pre-label></p>
+      </div>
+    </div>
+    <div class="curtain" data-curtain aria-hidden="true"></div>
+
+    <div id="app"></div>
+    <noscript>
+      <p style="padding:2rem;font-family:sans-serif">Visit Socotra is an interactive experience and needs JavaScript enabled.</p>
+    </noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
