@@ -260,7 +260,7 @@ const footer = (t) => `
   <div class="footer-legal">
     <span>${t.footer.copyright}</span>
     <span>${t.footer.credit} · <a href="https://www.instagram.com/p/DOLjYMWDHg6/" target="_blank" rel="noopener">Instagram</a></span>
-    <span>${t.footer.film}</span>
+    <span dir="ltr">${t.footer.poweredBy} <a href="https://tb3technologies.tech" target="_blank" rel="noopener">tb3technologies.tech</a></span>
   </div>
 </footer>`;
 

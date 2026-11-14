@@ -23,8 +23,8 @@ const fragmentShader = /* glsl */ `
   precision highp float;
   varying vec2 vUv;
 
-  uniform sampler2D uForeground;   // still photo (outside the lens)
-  uniform sampler2D uFrames;       // living video frame (inside the lens)
+  uniform sampler2D uForeground;   // still photo (revealed inside the lens)
+  uniform sampler2D uFrames;       // living video frame (main full-screen layer)
   uniform vec2 uRes;
   uniform vec2 uFgSize;
   uniform vec2 uFrameSize;
@@ -72,19 +72,20 @@ const fragmentShader = /* glsl */ `
     float radius = uRadius * uIntro;
     float strength = smoothstep(radius, radius + 0.04, dist + wob); // 0 inside, 1 outside
 
-    // foreground: slow drift + pointer parallax
-    vec2 fgUv = coverUv(vUv, uRes, uFgSize);
-    fgUv = (fgUv - 0.5) * (0.94 - 0.012 * sin(uTime * 0.12)) + 0.5 + uParallax * 0.012;
-
-    // revealed layer: slight magnification centred on the lens
+    // main layer: the living video, with a gentle pointer parallax
     vec2 frUv = coverUv(vUv, uRes, uFrameSize);
-    vec2 frM = coverUv(uMouse, uRes, uFrameSize);
-    frUv = (frUv - frM) * 0.92 + frM;
+    frUv = (frUv - 0.5) * 0.97 + 0.5 + uParallax * 0.01;
+
+    // revealed photo: slight magnification centred on the lens + slow drift
+    vec2 fgUv = coverUv(vUv, uRes, uFgSize);
+    vec2 fgM = coverUv(uMouse, uRes, uFgSize);
+    fgUv = (fgUv - fgM) * (0.92 - 0.01 * sin(uTime * 0.12)) + fgM;
 
     vec3 fg = texture2D(uForeground, fgUv).rgb;
     vec3 fr = texture2D(uFrames, frUv).rgb;
 
-    vec3 col = mix(fr, fg, strength);
+    // inside the lens -> photo, outside -> video
+    vec3 col = mix(fg, fr, strength);
 
     // thin warm rim on the lens edge
     float rim = smoothstep(radius - 0.012, radius + 0.02, dist + wob) - smoothstep(radius + 0.02, radius + 0.06, dist + wob);
@@ -105,8 +106,8 @@ function loadImage(src) {
 }
 
 /**
- * Lando-style cursor lens: a spring-damped organic blob that reveals a looping
- * frame sequence underneath a still foreground photo.
+ * Lando-style cursor lens: the looping frame sequence fills the screen and a
+ * spring-damped organic blob reveals the still photo underneath.
  */
 export async function createHero({ canvas, foregroundSrc, frameUrls, fps = 24, onProgress = () => {} }) {
   let renderer;

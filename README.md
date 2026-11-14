@@ -13,7 +13,7 @@ npm run frames    # re-extract hero frames from "Hero section/" (needs ffmpeg + 
 
 ## Sections (top to bottom)
 
-1. **Hero lens.** A Three.js/GLSL cursor blob (spring-damped, organic edge) cuts through the still photo to reveal the looping Desert Rose film. Drag on touch devices.
+1. **Hero lens.** The looping Desert Rose video fills the screen; a Three.js/GLSL cursor blob (spring-damped, organic edge) reveals the still photo underneath. Drag on touch devices.
 2. **Frame + marquee.** The hero shrinks into a framed window on dark while two giant text rows scroll in opposite directions; scroll speed pushes them.
 3. **Statement.** Giant uppercase paragraph that lights up word by word.
 4. **Horizontal gallery.** A pinned, scroll-driven strip of captioned photos and quotes; the background fades dark → sage → cream.
@@ -43,4 +43,4 @@ public/img/instagram/   20 photos from the @hobopeeba carousel
 
 ## Credits
 
-Photos © [@hobopeeba](https://www.instagram.com/hobopeeba/) ([post](https://www.instagram.com/p/DOLjYMWDHg6/)), used with permission. The hero film is AI-generated. Layout and motion are inspired by landonorris.com; no code, images or fonts from that site are used.
+Photos © [@hobopeeba](https://www.instagram.com/hobopeeba/) ([post](https://www.instagram.com/p/DOLjYMWDHg6/)), used with permission. Powered by [tb3technologies.tech](https://tb3technologies.tech). Layout and motion are inspired by landonorris.com; no code, images or fonts from that site are used.

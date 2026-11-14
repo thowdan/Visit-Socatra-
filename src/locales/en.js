@@ -31,7 +31,7 @@ export default {
     hint: 'Move to explore',
     hintTouch: 'Drag to explore',
     card: { label: 'Best season', value: 'Oct – Apr', foot: 'UNESCO World Heritage since 2008' },
-    alt: 'Dragon’s blood trees seen through twisting branches at sunrise; a lens reveals desert roses moving in the wind.',
+    alt: 'Desert roses moving in the wind in front of dragon’s blood trees; a lens reveals the trees through twisting branches at sunrise.',
   },
   marquee: {
     label: 'A message from the island',
@@ -140,7 +140,7 @@ export default {
     cta: 'Plan your trip',
     copyright: '© 2026 Visit Socotra. A fan-made showcase.',
     credit: 'Photos © @hobopeeba, used with permission',
-    film: 'Hero film: AI-generated',
+    poweredBy: 'Powered by',
     top: 'Back to top',
   },
 };
