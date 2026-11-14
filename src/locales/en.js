@@ -111,7 +111,7 @@ export default {
     t2: '&Celebrated',
     desc:
       'Recognised by UNESCO for biodiversity of global importance, Socotra’s ecosystems are among the most remarkable on the planet.',
-    script: 'Soqotra',
+    script: 'Socotra',
     items: [
       'UNESCO World Heritage · 2008',
       'UNESCO Biosphere Reserve · 2003',
